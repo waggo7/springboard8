@@ -8,6 +8,6 @@ honk(){
 return "beep";
 }
 toString(){
-return `The vehible is a ${this.make}, ${this.model}, ${this.year}`
+return `The vehicle is a ${this.make}, ${this.model}, ${this.year}`;
     }
 }
