@@ -1,0 +1,27 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+body {
+    background-color: #115ff4;
+}
+
+.top-container {
+    font-style: white;
+    text-align: center;
+    align-items: center;
+}
+
+.column-top {}
+
+td {
+    border: solid white;
+}
+
+txt {
+    color: white;
+}
