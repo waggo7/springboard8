@@ -1,0 +1,17 @@
+def vowel_count(phrase):
+    """Return frequency map of vowels, case-insensitive.
+
+        >>> vowel_count('rithm school')
+        {'i': 1, 'o': 2}
+        
+        >>> vowel_count('HOW ARE YOU? i am great!') 
+        {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
+    """
+    vowels = 'aeiou'
+
+    vowel_list =  [ vow for vow in phrase if vow in vowels]
+    for vows in vowel_list:
+        answer = {vows : vowel_list.count(vows)}
+        print(answer);
+
+vowel_count('HOW ARE YOU? i am great!') 
