@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+<h1> Create a User</h1>
+{%block title%} {{user.fullname}}{% endblock %}
+<form>
+    {% block content%} {% with messages=get_flashed_messages()%} {%if messages%} {%for message in messages %}
+    <div class="container">
+        {{messages}}
+    </div>
+    {%endfor%}{%endif%} {%endwith%}
+</form>
+<form action="/checkuser" method="POST" class="form container border">
+    <div>Enter first name</div><input name="first_name">
+    <div>Enter last name</div><input name="last_name">
+    <div>Please input an URL of this individual</div><input name="image_url">
+    <button action="submit"> Add users</button>
+</form>
+
+
+{%endblock%}

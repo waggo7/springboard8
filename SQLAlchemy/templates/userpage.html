@@ -1,0 +1,11 @@
+{%extends "base.html"%}{%block title%}Users{%endblock%} {% block content%}
+<form>
+    <ul>
+        {% for user in User%}
+        <li>
+            <a href="/idassignuser/{{user_id}}">{{user.fullname}}</a>
+        </li>
+        {%endfor%}
+    </ul>
+    <button class="btn btn-primary" action="/checkuser">add another</button>
+</form> {%endblock}
