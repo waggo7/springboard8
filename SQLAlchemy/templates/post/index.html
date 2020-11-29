@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+<h1 class="h1 bg-white text-center text-dark">Users</h1>
+{% endblock %}
+
+{% block content%}
+{% for post in Post %}
+<h2 class="mt-4">
+    <a href="/post/{{ post.id }}">{{ post.title }}</a>
+</h2>
+<p>{{ post.content }}</p>
+<p>
+    <small>By {{ post.user.full_name }} on {{ post.friendly_date }}</small>
+</p>
+{% endfor %}
+{% endblock}

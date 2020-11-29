@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+
+{% block content%}
+<div class="row">
+    {%if User.image_url%}
+    <div class="col-sm-3 col-6 float-left">
+        <img src="{{User.image_url}}" class=" img-fluid">
+    </div>
+    {%endif%}
+    <div class="col-sm-12 col-14">
+        <h1>
+            {{ User.fullname }}
+        </h1>
+        <h2 class="h2">
+            Posts
+        </h2>
+        <ul>
+            {%for post in User.Post%}
+            <li>
+                <a href="/post/{{post.id}}">{{post.title}}</a>
+                <small>{{post.friendly_date}}</small>
+            </li>
+            {%endfor%}
+            <form>
+                <button class="btn btn-primary btn-sm" formaction="/user/{{ User.id }}/edit" formmethod="GET">Edit
+                </button>
+                <button class="btn btn-danger btn-sm" formaction="/user/{{ User.id }}/delete" formmethod="POST">Delete
+                </button>
+            </form>
+
+
+        </ul>
+
+    </div>
+</div>
+<form action="/user">
+    <button class="btn btn-primary" action="submit">Another</button>
+</form>
+{%endblock%}

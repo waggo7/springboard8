@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block title %} Edit {{ User.full_name }} {% endblock %}
+{% block content%}
+<form method="POST">
+    <div class="form-group bg-light">
+        <label for="first_name">Edit first name</label>
+        <div class="input-group">
+            <input name="first_name" class=" form-control " type="text " value="{{ User.first_name }}">
+        </div>
+    </div>
+    <div class="form-group bg-light">
+        <label for="last_name">Edit last name</label>
+        <div class="input-group">
+            <input name="last_name" class=" form-control " type="text " value="{{ User.last_name }}">
+        </div>
+    </div>
+    <div class="form-group bg-light">
+        <label for="image_url">Edit ID#</label>
+        <div class="input-group">
+            <input name="image_url" class=" form-control " type="text" value="{{ User.image_url }}">>
+        </div>
+    </div>
+    </form>
+    <form action="/user/adduser" >
+        <a href="/user/adduser" class="btn btn-outline-info">Cancel</a>
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+
+{%endblock%}
