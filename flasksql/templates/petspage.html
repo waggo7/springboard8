@@ -1,0 +1,13 @@
+{%extends 'app.html'%} {%block content%}
+<div>
+    {%for pet in pets%}
+    <div>
+        <img class=" img-thumbnail " src=" {{ pet.image_url() }} ">
+        <a href=" {{url_for( 'edit_pets', pet_id=pet.id )}} "></a>
+        {%if pet.available%}
+        <b>is available!</b> {%endif%}
+    </div> {%else%}
+    <div>No pets yet</div>
+    {%endfor%}
+</div>
+<a class=" btn btn-primary " href=" {{ url_for( 'add_pet')}} ">Add Pet</a> {%endblock%}
