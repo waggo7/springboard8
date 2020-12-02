@@ -1,0 +1,40 @@
+{% extends 'base.html'%} {% block title %} {% endblock %} {% block content%}
+<form method="POST">
+    <div class="form-group bg-light">
+        <label for="username">Enter Username</label>
+        <div class="input-group">
+            <input name="username" class=" form-control " type="text " value=" Username">
+        </div>
+    </div>
+    <div class="form-group bg-light">
+        <label for="password">Enter desired password no longer than 20 characters</label>
+        <div class="input-group">
+            <input name="password" class=" form-control " type="text " value="password">
+        </div>
+    </div>
+    <div class="form-group bg-light">
+        <label for="email"> Enter email address</label>
+        <div class="input-group">
+            <input name="email" class=" form-control " type="text" value="email">>
+        </div>
+    </div>
+    <div class="form-group bg-light">
+        <label for="first_name">Enter first name</label>
+        <div class="input-group">
+            <input name="first_name" class=" form-control " type="text" value="First Name">
+        </div>
+    </div>
+    <div class="form-group bg-light">
+        <label for="last_name">Edit last name</label>
+        <div class="input-group">
+            <input name="last_name" class=" form-control " type="text" value="Last Name">
+        </div>
+    </div>
+
+    <p> <a href="/register" class="btn btn-outline-info">Submit</a></p>
+
+
+</form>
+
+
+{%endblock%}
