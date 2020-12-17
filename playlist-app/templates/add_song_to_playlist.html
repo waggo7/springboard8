@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Add a song to {{ playlist.name }}</h1>
+
+<form method="POST " class="widget input">
+    {% for field in form%}
+    <div class="form-group row ">
+        {{ form.name.label }}
+    </div> {% endfor %}
+    <button type="submit" class="btn btn-primary btn-lg ">Lets Add A Song</button>
+</form>
+{%endblock%}

@@ -1,0 +1,12 @@
+<!--  create and submit playlist information-->
+
+{% extends 'base.html' %} {% block content %}
+<h1 class="h1"> New Playlist</h1>
+<form method="POST">
+    <div class="form-group row ">
+        {{form.name.label(class="col-sm-2 col-form-label")}} {{form.name(class='col-form-input')}}</div>
+    <div class="form-group row ">
+        {{form.description.label(class="col-sm-2 col-form-label")}} {{form.description(class='col-form-input')}} </div>
+    {{form.submit(class='btn-primary')}}
+</form>
+{% endblock %}
