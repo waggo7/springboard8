@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Add a song to {{ playlist.name }}</h1>
+{%if name in form%}
+<ul>
+    {%for name in form%}
+    <li>{{name}}</li>{%endfor%}
+</ul>{%endif%}
+<a href="/songs/add" class='btn btn-primary'>No Songs?</a>{%endblock%}
