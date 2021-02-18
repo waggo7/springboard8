@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>LuckyNum</title>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body style="background:navy; color: white;">
+
+    <form style=" color:white " id="lucky-form" method="GET, POST">
+        <div style="color:white ">Name: <input id="name"> <b id="name-err"></b> </div>
+        <div>Birth Year: <input name="year" id="year"> <b id="year-err "></b> </div>
+        <div>Email: <input id="email"> <b id="email-err"></b> </div>
+        <div>Color: <input id="color"> <b id="color-err"></b> </div>
+        <button action="/api/get-lucky-num/">I Want To Feel Lucky!</button>
+    </form>
+
+    <div id="lucky-results"></div>
+
+</body>
+<script src="/static/lucky.js"></script>
+
+</html>
