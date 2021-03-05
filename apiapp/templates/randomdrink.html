@@ -1,0 +1,15 @@
+{%extends 'base.html'%} {%block content%}
+<!-- <h1>Hello</h1>
+<form action="/randomdrink/">
+    <div class="form-group">
+        <p>{{form.name}}</p>
+
+    </div> -->
+<form method="POST">
+    <div class="form-group row">
+        {{form.name}}
+        <div class="col-sm-10">
+            {{form(class="form-control")}}
+        </div>
+    </div>
+</form> {%endblock%}
